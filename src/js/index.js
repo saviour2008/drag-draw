@@ -1,13 +1,6 @@
-var Student = /** @class */ (function () {
-    function Student(firstName, lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-    Student.prototype.greeter = function () {
-        return "Hello,\u60A8\u597D" + this.firstName + this.lastName;
-    };
-    return Student;
-}());
-var user = new Student("王", "小明");
-var ele = document.body || document.documentElement;
-ele.innerHTML = user.greeter();
+define(["require", "exports", "./src/js/Sortable.min.js"], function (require, exports, Sortable) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
+    var el = document.getElementById('items');
+    var sortable = Sortable.create(el);
+});
